@@ -1,0 +1,266 @@
+#mealHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Individual meal card */
+.meal {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Meal title */
+.meal h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Meal image */
+.meal img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs for category, area, and tags */
+.meal p {
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Ingredients list */
+.meal ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.meal ul li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* YouTube link */
+.meal a {
+    margin-top: 1.2rem;
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.meal a:hover {
+    color: #c0392b;
+}
+
+
+#selectHolder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 0.85rem;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    max-width: 700px;
+}
+
+#selectHolder select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0.4rem 2rem 0.4rem 0.8rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 20px;
+    background-color: #fafafa;
+    font-size: 0.85rem;
+    color: #444;
+    min-width: 130px;
+    outline: none;
+    cursor: pointer;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%23999'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+#selectHolder select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.35);
+}
+
+#selectHolder select:hover {
+    border-color: #ccc;
+}
+
+#selectHolder #ingredientSelect {
+    height: 90px;
+    overflow-y: auto;
+    padding: 0.4rem 0.6rem;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+
+#selectHolder #ingredientSelect:focus {
+    box-shadow: none;
+}
+
+#ingredientSelect::-webkit-scrollbar {
+    width: 8px;
+}
+
+#ingredientSelect::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+#ingredientSelect::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 8px;
+}
+
+.ingredient-wrap {
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 130px;
+}
+
+.ingredient-wrap:focus-within {
+    border-color: #3498db;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.35);
+}
+
+#ingredientSelect::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+#searchMeals {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchMeals:hover {
+    background-color: #2b81b8;
+}
+
+/* Meal title */
+.popup h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Meal image */
+.popup img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs for category, area, and tags */
+.popup p {
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Ingredients list */
+.popup ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.popup ul li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* YouTube link */
+.popup a {
+    display: block;
+    width: fit-content;
+    margin: 1.2rem auto 0 auto;
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.popup a:hover {
+    color: #c0392b;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+}
